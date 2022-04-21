@@ -24,14 +24,14 @@ class MainActivity : AppCompatActivity() {
             ActivityResultContracts
                 .StartActivityForResult()
         ) { result ->
-            binding.et.setText(result.data?.getStringExtra("text"))
+            binding.et.setText(result.data?.getStringExtra(KEY_MAIN))
         }
     }
 
     private fun dataSend() {
         binding.btn.setOnClickListener {
             if (binding.et.text.toString().isEmpty()) {
-                Toast.makeText(this, "Введите текст", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.entertext), Toast.LENGTH_SHORT).show()
             } else {
                 Intent(this@MainActivity, SecondActivity::class.java).apply {
                     putExtra(KEY_MAIN, binding.et.text.toString())
