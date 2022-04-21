@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         dataSend()
 
+
             registerForActivityResult = registerForActivityResult(ActivityResultContracts
                 .StartActivityForResult()){
                 result ->
@@ -42,8 +43,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-        
+
     }
-
-
 }
