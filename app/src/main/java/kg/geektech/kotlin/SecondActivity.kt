@@ -16,7 +16,6 @@ class SecondActivity : AppCompatActivity() {
         binding = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.et2.setText(intent.getStringExtra("key"))
-
         binding.btn2.setOnClickListener {
             if (binding.et2.text.toString().isEmpty())
                 Toast.makeText(this, "Введите текст", Toast.LENGTH_SHORT).show()
@@ -25,6 +24,7 @@ class SecondActivity : AppCompatActivity() {
             finish()
         }
     }
+
     override fun onBackPressed() {
         setResult(Activity.RESULT_OK)
         finish()
